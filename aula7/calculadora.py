@@ -39,5 +39,5 @@ def calcular():
             etapas = f"{num1} ** {num2} = {resultado}"
         else:
             resultado = math.log(num1,num2)
-            etapas = f"Log{num1}^{num2} = {resultado}"
+            etapas = f"{resultado}"
     return etapas
