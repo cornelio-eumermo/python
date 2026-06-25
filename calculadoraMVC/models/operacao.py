@@ -25,7 +25,6 @@ class Operacao(db.Model):
             etapas=etapas,
             resultado=str(resultado)
         )
-    #  ADICIONAR E FAZER O COMMIT AQUI
         db.session.add(registro)
         db.session.commit();
         return registro
