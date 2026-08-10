@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Progresso{% endblock %}
+
+{% block content %}
+<h1 class="h4 mb-4"><i class="bi bi-bar-chart-line"></i> Dashboard de progresso</h1>
+
+<div class="row g-4">
+    <div class="col-12 col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h6">Tarefas por status (barras)</h2>
+                <canvas id="grafico-barras"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h6">Tarefas por status (pizza)</h2>
+                <canvas id="grafico-pizza"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard_progresso.js') }}"></script>
+{% endblock %}
